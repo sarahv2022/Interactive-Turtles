@@ -34,8 +34,16 @@ class ClickableTurtle(Turtle):
 
   # tells what happens when button is clicked
   def click(self, x, y):
-    # This is Placeholder:  What should this button do?
-    print ("Click")
+    
+    self.color("maroon")
+    self.left(50)
+    self.forward(120)
+    print ("aaah!!")
+
+    self.color("blue")
+    self.left(45)
+    self.forward(120)
+    print("run!!")
 
   # TODO:  
   # 1) Change the button color 
