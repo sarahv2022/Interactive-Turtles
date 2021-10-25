@@ -1,8 +1,9 @@
 from turtle import Screen
 from keyboardturtle import KeyboardTurtle
-from clickableturtle import ClickableTurtle
-from movingturtle import MovingTurtle
-from helper import randcolor
+from buttons import ClickableTurtle, Bkg, Weather, Mover
+from tree import Tree
+from clear import Clear
+
 
 # set up instance of the screen
 window = Screen()
@@ -10,21 +11,20 @@ screen_width = 600
 screen_height = 400
 window.setup(screen_width, screen_height)
 
+turtlelist = []
+
 # set up clickable instance
-button = ClickableTurtle()
+button = ClickableTurtle(clearlist = turtlelist)
+button1 = Bkg()
+button2 = Weather(clearlist = turtlelist)
+button3 = Clear(clearlist = turtlelist)
+button4 = Mover()
+
 
 #set up players
-player_1 = KeyboardTurtle(window)
 player_2 = KeyboardTurtle(window, "w", "d", "s", "a")
 
-player_1.goto(100,0)
-
 # set target of other player(our collison check) to the opposite player
-player_1.other_player = player_2
-player_2.other_player = player_1
-
-moveT = MovingTurtle(screen_width)
-
 
 # This is needed to listen for inputs
 window.listen()
@@ -33,6 +33,3 @@ window.mainloop()
 
 # be CAREFUL. We aren't controlling the screen draws in this program, so NO while True loops
 
-#TODO:  Check the classes and complete TODOs
-#push to github repo.
-#link repo to assignment

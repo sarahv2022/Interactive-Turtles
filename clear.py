@@ -1,11 +1,13 @@
+from buttons import ClickableTurtle, Bkg, Weather, Mover
 from turtle import Turtle, Screen
 
-class ClickableTurtle(Turtle):
+class Clear(Turtle): #clear
   # our 'wrapper' class of the Turtle class
   def __init__(self, 
-               name = "button", 
-               x = 0 , 
-               y = -100):
+               name = "clear screen", 
+               x = -205, 
+               y = 160, 
+               clearlist = None):
     # Runs Keyboard Turtle Constructor as well as the Turtle Constructor
     Turtle.__init__(self)
     
@@ -14,11 +16,12 @@ class ClickableTurtle(Turtle):
     self.x = x
     self.y = y
     self.window = Screen()
+    self.clearlist = clearlist
 
     #set turtle starting states
-    self.shape("square")
-    self.shapesize(1,3,1)
-    self.color("tan")
+    self.shape("circle")
+    self.shapesize(.5,.5,.8)
+    self.color("Black")
     self.penup()
     self.setx(self.x)
     self.sety(self.y)
@@ -28,23 +31,12 @@ class ClickableTurtle(Turtle):
 
   # Draws the button name above the button
   def draw_title(self, text, x, y):
-    self.goto(self.x, self.y + 17)
+    self.goto(self.x, self.y + 8)
     self.write(text, move=False, align='center', font=('Arial', 10, 'normal'))
     self.goto(self.x, self.y)
 
   # tells what happens when button is clicked
   def click(self, x, y):
-    
-    self.color("maroon")
-    self.left(50)
-    self.forward(120)
-    print ("aaah!!")
-
-    self.color("blue")
-    self.left(45)
-    self.forward(120)
-    print("run!!")
-
-  # TODO:  
-  # 1) Change the button color 
-  # 2) make the click method do something else
+    self.window.bgcolor("white")
+    for t in self.clearlist:
+      t.clear()
