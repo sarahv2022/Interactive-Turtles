@@ -15,11 +15,6 @@ def randwhat():
   
   return choice(colors)
 
-def randgray():
-  colors = ["WhiteSmoke", "LightGray", "gray", "DarkGray", "Gainsboro"] 
-  
-  return choice(colors)
-
 def randdirect():
   direct = [1, 2]
 

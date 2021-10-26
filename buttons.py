@@ -143,8 +143,6 @@ class Weather(Turtle): #weather
             self.right(3)
           
           self.end_fill()
-          
-          #self.circle(5, extent=None, steps=None)
 
       self.clearlist.append(Sun())
 
@@ -159,7 +157,8 @@ class Mover(Turtle):
   def __init__(self, 
                name = "hi!", 
                x = 200, 
-               y = -180):
+               y = -180,
+               ):
     # Runs Keyboard Turtle Constructor as well as the Turtle Constructor
     Turtle.__init__(self)
     
@@ -182,29 +181,20 @@ class Mover(Turtle):
 
   # Draws the button name above the button
   def draw_title(self, text, x, y):
-    self.goto(self.x, self.y + 5)
+    self.goto(x, y + 5)
     self.write(text, move=False, align='center', font=('Arial', 6, 'normal'))
-    self.goto(self.x, self.y)
+    self.goto(x, y)
 
   # tells what happens when button is clicked
   def click(self, x, y):
 
-    randy = randint(-200,200)
-    randx = randint(-200,200)
-    self.goto(randx, randy)
-
     self.clear()
 
+    randy = randint(-180,180)
+    randx = randint(-280,280)
+    self.goto(randx, randy)
+
     self.name = randname()
-    self.x = x
-    self.y = y
-    self.window = Screen()
 
-    self.draw_title(self.name, self.x, self.y)
-    self.window.onscreenclick(None)
-    self.onclick(self.click)
-
-    self.draw_title(self, x, y)
-
-
+    self.draw_title(self.name, randx, randy)
 

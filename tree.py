@@ -21,21 +21,7 @@ class Tree(Turtle):
     self.pendown()
     self.pensize(width = 2.5)
 
-    """
-
-    for trunk in range(8):
-      self.left(randint(5,15))
-      self.forward(randint(1,15))
-
-    for tree in range(10):
-      self.right(randint(1,3))
-      self.forward(randint(1,10))
-      self.left(randint(1,9))
-      self.forward(randint(1,10))
-
-    self.color(randgreen())
-
-    """
+    #tree-without-trunk making
 
     self.begin_fill()
 
@@ -89,55 +75,7 @@ class Tree(Turtle):
       self.forward(randint(1,2))
 
     self.end_fill()
-    """
 
-    self.begin_fill()
-
-    self.left(randint(180,220))
-    self.forward(randint(1,4))
-
-    for leaf in range(randint(38,45)):  #one
-      self.right(randint(2,5))
-      self.forward(randint(2,3))
-
-    self.left(randint(180,220))
-    self.forward(randint(1,4))
-
-    for leaf in range(randint(38,45)):  #one
-      self.right(randint(2,5))
-      self.forward(randint(2,3))
-
-    self.left(randint(180,220))
-    self.forward(randint(1,4))
-
-    for leaf in range(randint(38,45)):  #one
-      self.right(randint(2,5))
-      self.forward(randint(2,3))
-
-    self.left(randint(180,220))
-    self.forward(randint(1,4))
-
-    for leaf in range(randint(38,45)):  #one
-      self.right(randint(2,5))
-      self.forward(randint(2,3))
-
-    self.left(randint(180,220))
-    self.forward(randint(1,4))
-
-    for leaf in range(randint(38,45)):  #one
-      self.right(randint(2,5))
-      self.forward(randint(2,3))\
-    
-    self.end_fill()
-
-"""
-"""
-   birds for leaf in range(15):   
-      self.right(randint(1,7))
-      self.forward(randint(3,8)) """
-
-
-    
 
     
     

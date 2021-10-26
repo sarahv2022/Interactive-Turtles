@@ -20,16 +20,12 @@ button2 = Weather(clearlist = turtlelist)
 button3 = Clear(clearlist = turtlelist)
 button4 = Mover()
 
-
 #set up players
 player_2 = KeyboardTurtle(window, "w", "d", "s", "a")
-
-# set target of other player(our collison check) to the opposite player
 
 # This is needed to listen for inputs
 window.listen()
 window.mainloop()
 
 
-# be CAREFUL. We aren't controlling the screen draws in this program, so NO while True loops
 

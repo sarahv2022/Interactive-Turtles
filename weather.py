@@ -1,6 +1,6 @@
 from turtle import Turtle
 from random import randint
-from helper import randdirect, randblue, randgray, randwhat
+from helper import randdirect, randblue, randwhat
 
 class Rain(Turtle):    
 
@@ -32,21 +32,21 @@ class Rain(Turtle):
 
     self.left(180)
 
-    #1
+    #1 drop
     self.forward(num2)
 
     self.pendown()
     self.forward(num1)
     self.penup()
 
-    #2
+    #2 drop
     self.forward(num2)
 
     self.pendown()
     self.forward(num1)
     self.penup()
 
-    #3
+    #3 drop
     self.forward(num2)
 
     self.pendown()
@@ -82,21 +82,21 @@ class Apocalypse(Turtle):
 
     self.left(180)
 
-    #1
+    #1 drop
     self.forward(num2)
 
     self.pendown()
     self.forward(num1)
     self.penup()
 
-    #2
+    #2 drop
     self.forward(num2)
 
     self.pendown()
     self.forward(num1)
     self.penup()
 
-    #3
+    #3 drop
     self.forward(num2)
 
     self.pendown()

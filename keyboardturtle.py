@@ -26,7 +26,7 @@ class KeyboardTurtle(Turtle):
     self.window = Screen()
     self.name = "you"
 
-      #set turtle starting states
+    #set turtle starting states
     self.shape("triangle")
     self.color("black")
     self.shapesize(.8,.8,.8)
@@ -36,13 +36,13 @@ class KeyboardTurtle(Turtle):
     self.draw_title(self.name, self.x, self.y)
 
 
-      # Sets up keyboard command examples
+    # Sets up keyboard command examples
     self.window.onkey(self.go_right, self.turn_right)
     self.window.onkey(self.go_forward, self.straight)
     self.window.onkey(self.go_left, self.turn_left)
     self.window.onkey(self.go_backward, self.back)
 
-      #sets up controlling variables (y not implemented)
+    #sets up controlling variables (y not implemented)
     self.movement_speed = 7
     self.turn_speed = 45
     self.collision_distance = 20
@@ -73,21 +73,3 @@ class KeyboardTurtle(Turtle):
   def go_left(self):
     self.left(self.turn_speed)
 
-  
-
-
-  """"
-
-  def check_collision(self, obj_to_check):
-    distance_x = obj_to_check.xcor() - self.xcor()
-    distance_x = abs(distance_x)
-
-    distance_y = obj_to_check.ycor() - self.ycor()
-    distance_y = abs(distance_y)
-
-    if distance_x < self.collision_distance and distance_y < self.collision_distance:
-      return True
-    else:
-      return False
-
-      """
